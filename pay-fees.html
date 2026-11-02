@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pay Fees · शुल्क भुगतान | DAV Public School, Nabinagar</title>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"></head>
+<body>
+<div id="site-header"></div>
+<main id="main" class="paypage"><div class="wrap" style="padding:0 var(--pad) 80px">
+ <h1>Pay school fees</h1>
+ <p class="sub">शुल्क भुगतान · Secure payment through the school’s official portal</p>
+ <form class="card" id="fee" novalidate>
+  <label for="sid">Admission / Student ID <span>· प्रवेश / छात्र आईडी</span></label>
+  <input id="sid" name="sid" autocomplete="off" required>
+  <label for="dob">Date of birth <span>· जन्म तिथि (if the portal asks)</span></label>
+  <input id="dob" name="dob" type="date">
+  <p class="note">Fee lookup needs the school’s OSM fee API. It is not connected yet, so no amounts are shown here. Your Student ID is never saved by this page. / फीस विवरण अभी जुड़ा नहीं है।</p>
+  <table aria-label="Fee summary"><thead><tr><th>Item · विवरण</th><th>Amount · राशि</th></tr></thead>
+   <tbody><tr><td>Period · अवधि</td><td>Shown after lookup</td></tr><tr><td>Base fee · मूल शुल्क</td><td>Shown after lookup</td></tr><tr><td>Late fee · विलंब शुल्क</td><td>Shown after lookup</td></tr><tr><th>Total · कुल</th><th>Shown after lookup</th></tr></tbody></table>
+  <div class="cta"><button class="btn solid" type="submit">Look up fee · खोजें</button>
+  <a class="btn pay" href="https://davnabinagar.com/F66F428D-52D7-45B1-BFC5-3BEC8A0E95B9/CMS/Page/Pay-Online-Fee">Continue to secure payment · भुगतान करें</a></div>
+  <p id="msg" role="status" style="margin-top:14px"></p>
+ </form>
+ <div class="card" style="margin-top:24px">
+  <h3 style="margin-bottom:8px">After you pay · भुगतान के बाद</h3>
+  <details><summary>Payment successful</summary><p>Keep the receipt shown by the gateway. Download it from OSM Login → Fee history, if your school enables it.</p></details>
+  <details><summary>Payment failed or money deducted</summary><p>Do not pay twice. Wait 24 hours, check OSM fee history, then contact the school office with your Student ID and transaction reference.</p></details>
+  <p style="margin-top:16px">Card or UPI details are never entered on this site. <a href="https://davnabinagar.com/OSM"><b>OSM Login</b></a></p>
+ </div>
+</div></main>
+<div id="site-footer"></div>
+<script src="main.js"></script></body></html>
